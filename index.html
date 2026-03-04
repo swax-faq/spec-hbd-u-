@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 4.6.2 (latest 4 version) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Animate.css (latest stable 4.x) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/hbd.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <title>Happy Birthday!</title>
+</head>
+
+<body>
+
+  <audio id="background-music" src="./music/" preload="auto"></audio>
+
+  <div class="bg" id="content">
+    <div id="sparkles-container"></div>
+
+    <div class="container" id="timer">
+      <h5>Countdown to <x id='name'></x> birthday :</h5>
+      <ul>
+        <li><span id="days"></span>Days</li>
+        <li><span id="hours"></span>Hours</li>
+        <li><span id="minutes"></span>Minutes</li>
+        <li><span id="seconds"></span>Seconds</li>
+      </ul>
+    </div>
+
+    <div id="slideSatu" class="animate__animated animate__fadeIn animate__slow d-none">
+      <img src="./img/hbd1.png" class="img">
+    </div>
+
+    <div id="name" class="fariq d-none"><img src="./img/name.png" class="img"></div>
+
+    <div id="slideDua" class="slides d-none paper animate__fadeIn animate__animated animate__delay-2s animate__slow">
+      <div class="paper-content">
+        <p id="teks1" class="teks"></p>
+      </div>
+    </div>
+
+    <div id="slideTiga" class="slides d-none paper animate__fadeIn animate__animated">
+      <div class="paper-content">
+        <p id="teks2" class="teks"></p>
+      </div>
+    </div>
+
+    <div class="kotak d-none slides animate__animated animate__fadeIn animate__delay-2s" id="slideEmpat">
+      <div class="row">
+        <div class="col-sm mt-1">
+          <h5>Do you like it?</h5>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-4 offset-2">
+          <button id="gak" class="btn btn-outline-danger"> No! </button>
+        </div>
+        <div class="col-4">
+          <button id="suka" class="btn btn-outline-info"> Like it!! </button>
+        </div>
+      </div>
+    </div>
+    <div id="feedbackSection" class="d-none slides animate__animated animate__fadeIn">
+  <div class="container mt-4 text-center">
+    <h4 class="mb-3">Before You Go... 💖</h4>
+
+    <form id="feedbackForm"
+      action="https://formsubmit.co/naaajisoomee@gmail.com"
+      method="POST">
+
+      <input type="text" name="name"
+        class="form-control mb-2"
+        placeholder="Your Name" required>
+
+      <textarea name="message"
+        class="form-control mb-2"
+        placeholder="Write something about this 💌"
+        required></textarea>
+
+      <select name="rating"
+        class="form-control mb-3">
+        <option >Do you want to give star</option>
+        <option>infinite⭐</option>
+        <option>⭐⭐⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐</option>
+        <option>⭐⭐⭐</option>
+      </select>
+
+      <button type="submit"
+        class="btn btn-danger btn-block">
+        Send 💕
+      </button>
+
+      <!-- Hidden Settings -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Birthday Feedback 💖">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://spec-hbd-u.vercel.app">
+    </form>
+  </div>
+</div>
+
+    <div id="slideLima" class="d-none animate__fadeIn animate__animated animate__slow">
+      <i class="fas fa-heart fa-5x text-danger"></i>
+    </div>
+
+    <p id="trims" class="text-muted d-none mt-2"></p>
+
+    <button id="tap" class="button d-none animate__animated animate__pulse animate__slow animate__repeat-3">
+      <div class="button-box">
+        <span class="button-elem">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+            </path>
+          </svg>
+        </span>
+        <span class="button-elem">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+            </path>
+          </svg>
+        </span>
+      </div>
+    </button>
+
+  </div>
+
+  <!-- JavaScript --
+
+  <!-- jQuery 3.6.4 (latest stable 3.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper.js (Required for Bootstrap 4) -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Bootstrap 4.6.2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome Latest -->
+  <script src="https://kit.fontawesome.com/61e5120832.js" crossorigin="anonymous"></script>
+
+  <!-- TypeIt Latest -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+
+  <!-- Moment.js Latest -->
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.43/builds/moment-timezone-with-data.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
